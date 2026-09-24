@@ -16,21 +16,24 @@
 <body><main>
 <div class="eyebrow">Legal</div>
 <h1>Privacy policy</h1>
-<p class="meta">Effective September 23, 2026</p>
+<p class="meta">Effective September 24, 2026</p>
 
-<p>CMAX is built local-first. <strong>Your training log lives on your phone.</strong> Sessions, sets, weights and records are stored on the device and are not sent to us unless you turn on a feature that needs them, and each of those is described below.</p>
+<p><strong>Your data belongs to your CMAX account.</strong> Your training log (sessions, sets, weights, records, rest days, routines and plans) and everything you record in Body (weights, measurements and progress photos) are saved to your account, so they follow you to any phone you sign in on. Your phone keeps a working copy so logging works with no signal, and syncs it when it can.</p>
 
-<p><strong>Your training log also backs up to your own iCloud account</strong>, so a new phone, a reinstalled app or a second device does not mean a lost history. This uses Apple's CloudKit private database, which means it is stored under your Apple ID, in your iCloud storage, and <strong>we cannot read it, restore it or recover it for you</strong>. It is not a CMAX server and nothing about it reaches us. If you are not signed in to iCloud, the log simply stays on the device and the app works exactly the same. Your exercise library and your saved routines are not part of this; they are rebuilt on the device.</p>
+<p><strong>Signing out takes it off the phone</strong>, once everything has been saved to your account, so the next person to sign in on that phone sees their own data and not yours. Anything that could not be saved before you signed out (with no signal, for example) waits on that phone, unreadable in the app, until you sign in there again.</p>
+
+<p><strong>It is stored on our servers, and that is a change.</strong> Until September 24, 2026 the log lived on your phone and backed up to your own iCloud account, which we could not read. It is now stored with our database provider, protected by access rules that let only your account read it, encrypted in transit and at rest. It is not end-to-end encrypted, which means it is not technically impossible for us to read; we do not look at it, except to fix a problem you ask us about. If you used CMAX before that date, an older copy may still sit in your iCloud; CMAX no longer reads or writes it, and you can remove it in the Settings app under your name, iCloud, then Manage Storage.</p>
 
 <h2>What we collect, and when</h2>
 <ul>
-<li><strong>Account.</strong> If you sign in, we store the identifier and email address provided by Apple or Google, and the username you choose. Sign in with Apple's Hide My Email works; we store the relay address Apple gives us. CMAX requires an account to use. What the account does not hold is your training: sessions, sets, weights and records live on the device and are not uploaded unless you turn on a feature that needs them, each described below.</li>
+<li><strong>Account.</strong> If you sign in, we store the identifier and email address provided by Apple or Google, and the username you choose. Sign in with Apple's Hide My Email works; we store the relay address Apple gives us. CMAX requires an account to use.</li>
+<li><strong>Your training and Body.</strong> Everything described at the top of this page, stored in your account and readable by your account alone. Progress photos are kept in private storage that only your account can open. Nobody in your groups and no trainer can see any of it unless you share it as described below.</li>
 <li><strong>Groups.</strong> When you are in a group, each finished session uploads a <strong>day summary</strong>: the date, how many sessions, how many sets, total volume, and whether you declared a rest day. Not the exercises, not the weights. People in your groups can see these summaries. Nobody else can.</li>
 <li><strong>Trainer.</strong> If you pair with a trainer and approve them, the categories you tick are uploaded for that trainer to read: routines and sessions, sets, reps and weights, records and streak. Unticking a category, or ending the link, <strong>deletes</strong> those rows from the server rather than hiding them. Nothing is uploaded for a trainer you have not approved.</li>
 <li><strong>Gym records.</strong> If you pick a gym and post a record, we store the lift, the weight, the reps, the date, the gym, and the video you chose. These are visible to every CMAX user who has picked the same gym. When you post, the app takes <strong>one location reading</strong> to check you are near the gym you picked. The reading is compared on your phone and discarded; <strong>no location is stored</strong>, and the app has no background location access.</li>
 <li><strong>Notifications.</strong> If you allow notifications, we store a device token so a trainer request, a suggested routine, an accepted suggestion or a nudge from your group can reach you, at most one push a day. Nothing else is sent.</li>
 <li><strong>Apple Health.</strong> With your permission the app writes finished sessions to Health and reads your body weight for an energy estimate. If you also allow it from Body, the weight, body fat and waist readings you log are written to Health, and weights already in Health can be brought into CMAX. Health data stays in Health on your device and is never sent to us.</li>
-<li><strong>Body.</strong> Weights, measurements and progress photos you record in Body are stored on your device only. They are never uploaded, not to us, not to your groups and not to a trainer. Progress photos are saved inside the app, protected while your phone is locked, and are included in your device backup like the rest of the app.</li>
+<li><strong>Body.</strong> Weights, measurements and progress photos are saved to your account as described at the top of this page. They are never shared with your groups or with a trainer. On the phone, progress photos are protected while it is locked, and the location a photo was taken at is removed before it is saved.</li>
 </ul>
 
 <h2>What we do not do</h2>
@@ -41,13 +44,13 @@
 </ul>
 
 <h2>Who processes it</h2>
-<p>Data you upload is stored with <strong>Supabase</strong> (database, storage and functions), which hosts the CMAX backend. Sign-in is handled by <strong>Apple</strong> and <strong>Google</strong>, and push notifications by Apple. Each acts as a processor for CMAX; none of them receives your training data for their own purposes.</p>
+<p>Data you upload is stored with <strong>Supabase</strong> (database, storage and functions), which hosts the CMAX backend. Sign-in is handled by <strong>Apple</strong> and <strong>Google</strong>, and push notifications by Apple. Each acts as a processor for CMAX; none of them uses your data for their own purposes.</p>
 
 <h2>Who can see what</h2>
-<p>Your username, your time zone (stored so that "today" means your today rather than the server's) and day summaries: people who share a group with you. Your uploaded log: only trainers you have approved, only the categories you ticked. Your gym records and videos: users at the same gym. Anyone can report a record; a record reported by three different people who train at that gym is hidden, and you can block a person so neither of you sees the other.</p>
+<p>Your training log, your Body readings and your progress photos: you, and nobody else. Your username, your time zone (stored so that "today" means your today rather than the server's) and day summaries: people who share a group with you. Your uploaded log: only trainers you have approved, only the categories you ticked. Your gym records and videos: users at the same gym. Anyone can report a record; a record reported by three different people who train at that gym is hidden, and you can block a person so neither of you sees the other.</p>
 
 <h2>Deleting your data</h2>
-<p><strong>Settings → Delete account</strong> removes your account and everything on the server attached to it: memberships, trainer links, the shared log, records, videos, reports and device tokens. It cannot be undone. <strong>Your training log on the phone is not touched</strong>; it was never the account's. Delete the app to remove that, or use Settings → Export to keep a copy first.</p>
+<p><strong>Settings → Delete account</strong> deletes your account and everything in it: your training log, your Body readings and progress photos, memberships, trainer links, the shared log, gym records, videos, reports and device tokens, from our servers and from the phone. It cannot be undone. Use Settings → Export data first to keep a copy of your training.</p>
 
 <h2>Children</h2>
 <p>CMAX is not directed at children under 13 and does not knowingly collect information from them.</p>
